@@ -5,4 +5,5 @@ THe main tools used within this project are the libraries BeautifulSoup (for htm
 
 Some future additions that could be made to this project are...
 - Automating the collection of data (possibly using the Google Keeps API to run periodic jobs in the form of a data pipeline)
+- Importing data from other sources to perform comparative analysis between my data and standard data available.
 - Applying a neural network to make predictions of weight fluctuations in the future, however, this would require much more data to allow for the proper training and validation of the machine learning model.
