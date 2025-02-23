@@ -1,9 +1,14 @@
-[project]
+[tool.poetry]
 name = "weight-tracking-project"
 version = "0.1.0"
-description = "Add your description here"
+description = ""
+authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
-    "pandas>=2.2.3",
-]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
