@@ -14,6 +14,7 @@ google-api-python-client = "^2.161.0"
 gkeepapi = "^0.16.0"
 python-dotenv = "^1.0.1"
 gpsoauth = "^1.1.1"
+requests = "2.23.0"
 
 
 [build-system]

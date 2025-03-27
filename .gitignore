@@ -2,3 +2,5 @@
 client_secret.json
 david-project-451505-6b495f7a587f.json
 .env*
+credentials.json
+token.json

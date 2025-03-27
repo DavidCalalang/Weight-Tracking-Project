@@ -6,7 +6,21 @@ load_dotenv()
 
 email = os.getenv('email')
 password = os.getenv('password')
-android_id = '0123456789abcdef'
+android_id = os.getenv('android_id')
+
+master_response = gpsoauth.perform_master_login(email, password, android_id)
+print(master_response)
+master_token = master_response['Token']
+
+auth_response = get_master_token.perform_oauth(
+    email, master_token, android_id,
+    service='sj', app='com.google.android.gsf',
+    client_sig='...')
+token = auth_response['Auth']
+
+print(master_token)
+
+"""
 device_country = "us"
 operator_country = "us"
 app = "com.google.android.gsf"
@@ -23,15 +37,4 @@ master_token = gpsoauth.perform_master_login(
         )
 
 print(master_token)
-
-
-"""
-master_response = gpsoauth.perform_master_login(email, password, android_id)
-master_token = master_response['Token']
-
-auth_response = get_master_token.perform_oauth(
-    email, master_token, android_id,
-    service='sj', app='com.google.android.gsf',
-    client_sig='...')
-token = auth_response['Auth']"
 """
